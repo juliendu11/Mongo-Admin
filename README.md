@@ -22,6 +22,7 @@ SESSION_SECRET=
 - [X] View and access collections
 - [X] View documents 
 - [X] Add login for production
+- [ ] Unit test
 - [ ] View a single document
 - [ ] Edit document
 - [ ] Delete document
@@ -47,7 +48,10 @@ SESSION_SECRET=
 - [express-session](https://www.npmjs.com/package/express-session)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [compression](https://www.npmjs.com/package/compression)
+- [jquery.json-viewer](https://www.npmjs.com/package/jquery.json-viewer)
 
 ## Dev Dependencies
 
 - [nodemon](https://www.npmjs.com/package/nodemon)
+- [eslint](https://www.npmjs.com/package/eslint)
+- [jest](https://www.npmjs.com/package/jest)
