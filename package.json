@@ -1,14 +1,14 @@
 {
-  "name": "mongoadmin",
+  "name": "@juliendu11/mongoadmin",
   "version": "0.1.0",
-  "description": "",
+  "description": "A simple web interface for local mongodb database management",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "juliendu11",
+  "license": "MIT",
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
@@ -19,5 +19,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliendu11/Mongo-Admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juliendu11/Mongo-Admin/issues"
+  },
+  "homepage": "https://github.com/juliendu11/Mongo-Admin#readme"
 }
