@@ -1,7 +1,8 @@
 
 const config = {
-    HOST: process.env.DATABASE_HOST,
-    DB: process.env.DATABASE_NAME,
+    DATABASE: process.env.DATABASE_NAME,
+    USERNAME:process.env.DATABASE_USERNAME,
+    PASSWORD:process.env.DATABASE_PASSWORD
 };
 
 

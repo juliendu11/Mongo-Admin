@@ -1,9 +1,10 @@
 const {MongoClient} = require('mongodb');
+const mongoDBConfig = require('../config/database')
 
 module.exports = async () =>{
-    const username = process.env.DATABASE_USERNAME;
-    const password = process.env.DATABASE_PASSWORD;
-    const database = process.env.DATABASE_NAME;
+    const username = mongoDBConfig.USERNAME;
+    const password = mongoDBConfig.PASSWORD;
+    const database = mongoDBConfig.DATABASE;
 
     let uri = null;
     if (process.env.NODE_ENV === 'production'){
