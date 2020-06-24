@@ -1,4 +1,5 @@
 const MongoService = require('../services/mongoService');
+const cred  = require('../config/cred');
 
 exports.Home = async (req, res) => {
   const mongoServiceInstance = new MongoService(req.app.locals.mongoClient);
@@ -8,8 +9,25 @@ exports.Home = async (req, res) => {
   });
 };
 
-exports.Login = async(req,res)=>{
+exports.LoginView = async(req,res)=>{
   res.render('pages/Login');
+};
+
+exports.Login = async(req,res)=>{
+  if (req.body.password !== cred){
+    return res.status(400).send({message: 'Bad password'});
+  }
+  else{
+    req.session.logged = true;
+    return res.status(200).send({message: ''});
+  }
+};
+
+exports.Logout = async (req,res)=>{
+  if (req.session.account){
+    req.session.logged = false;
+  }
+  res.redirect('/login');
 };
 
 exports.Database = async(req,res)=>{

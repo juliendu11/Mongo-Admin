@@ -21,7 +21,7 @@ SESSION_SECRET=
 - [X] View and access databases 
 - [X] View and access collections
 - [X] View documents 
-- [ ] Add login for production
+- [X] Add login for production
 - [ ] View a single document
 - [ ] Edit document
 - [ ] Delete document
