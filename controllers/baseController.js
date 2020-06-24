@@ -24,9 +24,7 @@ exports.Login = async(req,res)=>{
 };
 
 exports.Logout = async (req,res)=>{
-  if (req.session.account){
-    req.session.logged = false;
-  }
+  req.session.logged = false;
   res.redirect('/login');
 };
 
