@@ -32,12 +32,13 @@ exports.Collection = async(req,res)=>{
   const dbName = req.params.dbname;
   const collectionName = req.params.collectionname;
 
-  const path = `${dbName}/${collectionName}`;
+  const path = `${dbName} / ${collectionName}`;
 
   const mongoServiceInstance = new MongoService(req.app.locals.mongoClient)
   const databases = await mongoServiceInstance.getDatabases();
   const documents = await mongoServiceInstance.getCollectionsDocuments(dbName,collectionName)
 
+  console.log(documents)
   res.render("pages/Collection",{
     databases: databases.databases,
     name: collectionName,
@@ -51,7 +52,7 @@ exports.Document = async(req,res)=>{
   const collectionName = req.params.collectionname;
   const documentId = req.params.id;
 
-  const path = `${dbName}/${collectionName}/${documentId}`;
+  const path = `${dbName} / ${collectionName} / ${documentId}`;
 
   res.render('pages/Document');
 }
