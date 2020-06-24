@@ -29,10 +29,18 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Dashboard</h1>
+            <h1 class="h2"><%=name%></h1>
             
           </div>
-
+          <ul class="nav flex-column">
+            <% for(var i=0; i < collections.length; i++) { %>
+            <li class="nav-item">
+                <a class="nav-link active" href="<%=name%>/<%=collections[i].name%>">
+                    <span><%=collections[i].name%></span>
+                  </a>
+            </li>
+            <% } %>
+          </ul>
 
          
         </main>
