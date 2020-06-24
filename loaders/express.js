@@ -9,7 +9,7 @@ const serverConfig = require('../config/server');
 module.exports = ({app}) =>{
     app.set('view engine', 'ejs');
 
-    app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 10 * 60 * 1000 }}))
+    app.use(session({ secret: serverConfig.expressSessionSecret, cookie: { maxAge: 10 * 60 * 1000 }}))
     app.use(compression());
 
     routes(app)
