@@ -4,6 +4,8 @@ const session = require('express-session');
 const compression = require('compression')
 const express = require('express')
 
+const serverConfig = require('../config/server');
+
 module.exports = ({app}) =>{
     app.set('view engine', 'ejs');
 
@@ -12,7 +14,7 @@ module.exports = ({app}) =>{
 
     routes(app)
 
-    app.listen(3000, function () {
-        console.log('Example app listening on port http://localhost:3000/ !')
+    app.listen(serverConfig.expressPort, function () {
+        console.log(`Example app listening on port http://localhost:${serverConfig.expressPort}/ !`)
     })
 }
