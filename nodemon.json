@@ -1,0 +1,8 @@
+{
+    "verbose": true,
+    "ignore": ["*.test.js", "fixtures/*", ".expressvue"],
+    "ext": "js,json,vue",
+    "events": {
+      "restart": "npm run clean"
+    }
+  }

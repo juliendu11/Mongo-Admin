@@ -2,11 +2,9 @@ const MongoService = require('../services/mongoService');
 const cred  = require('../config/cred');
 
 exports.Home = async (req, res) => {
-  const mongoServiceInstance = new MongoService(req.app.locals.mongoClient);
-  const databases = await mongoServiceInstance.getDatabases();
-  res.render("pages/Home", {
-    databases: databases.databases,
-  });
+  // const mongoServiceInstance = new MongoService(req.app.locals.mongoClient);
+  // const databases = await mongoServiceInstance.getDatabases();
+  res.renderVue("home.vue",{});
 };
 
 exports.LoginView = async(req,res)=>{
@@ -52,7 +50,6 @@ exports.Collection = async(req,res)=>{
   const databases = await mongoServiceInstance.getDatabases();
   const documents = await mongoServiceInstance.getCollectionsDocuments(dbName,collectionName);
 
-  console.log(documents);
   res.render("pages/Collection",{
     databases: databases.databases,
     name: collectionName,
